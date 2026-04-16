@@ -216,29 +216,29 @@ export default function SimuladorApp() {
         {phase === 'c3_channel' && (
           <ChannelQuestion
             icon="bike"
-            nativeVideoUrl="/videos/Video_De_Entrega_De_Moto.mp4"
-            title="🛵 CASO 3: ENTREGAS EN 15 MIN — RAPPI TURBO"
-            description="El cliente exige inmediatez. El reto es el alto costo urbano: el trayecto final desde la bodega hasta la puerta del cliente consume hasta el 53% del costo total logístico."
-            question="Este modelo de hiper-proximidad que despacha desde Dark Stores cerradas al público se conoce como:"
-            correctAnswer="Quick Commerce"
-            options={['Canal Corto', 'Canal Largo', 'Quick Commerce']}
-            successVoice="Correcto. Quick Commerce. Las Dark Stores son bodegas urbanas cerradas al público que permiten despachar en minutos. Ve a los carteles y demuestra la ruta."
-            errorVoice="¡Error! Este modelo de hiper-proximidad con Dark Stores es Quick Commerce, no un canal tradicional."
+            nativeVideoUrl=""
+            title="💻 CASO 3: PRODUCTO DIGITAL Y E-COMMERCE"
+            description="El cliente exige inmediatez cuando pide sus productos por canales digitales (como una página web o Instagram). El reto logístico es entregar el producto de forma instantánea a través de internet, sin usar cajas, bodegas físicas ni camiones de transporte."
+            question="Este modelo donde la marca llega al usuario final sin usar intermediarios físicos se conoce como:"
+            correctAnswer="Canal Directo"
+            options={['Canal Largo', 'Canal Corto', 'Canal Directo']}
+            successVoice="Correcto. Canal Directo. La marca entrega el producto digital al cliente final por internet, sin intermediarios físicos. Ve a los carteles y demuestra la ruta."
+            errorVoice="¡Error! Cuando vendes productos digitales por internet, redes sociales o web, eliminas intermediarios físicos. Eso es un Canal Directo, no Largo ni Corto."
             onSuccess={() => setPhase('c3_pins')}
-            onError={() => triggerPenalty('¡Error! Este modelo de hiper-proximidad con Dark Stores es Quick Commerce, no un canal tradicional.', 'c3_pins', 'Fase 1-3: Seleccionó mal el tipo de canal logístico (Caso Rappi)')}
+            onError={() => triggerPenalty('¡Error! Cuando vendes productos digitales por internet, redes sociales o web, eliminas intermediarios físicos. Eso es un Canal Directo.', 'c3_pins', 'Fase 1-3: Seleccionó mal el tipo de canal logístico (Caso Producto Digital / E-commerce)')}
           />
         )}
         {phase === 'c3_pins' && (
           <PinEntry
-            title="🛵 CASO 3: RAPPI TURBO"
-            subtitle="Ruta Física — Quick Commerce"
+            title="💻 CASO 3: PRODUCTO DIGITAL"
+            subtitle="Ruta Digital — Canal Directo"
             pinSequence={[
-              { pin: '50', voice: 'Dark Store activada. Inventario listo para despacho inmediato. Avanza.' },
-              { pin: '60', voice: '¡Quick Commerce completado con éxito! Entrega en la última milla dominada.' },
+              { pin: '50', voice: 'Plataforma digital activada. Producto entregado por internet sin intermediarios. Avanza.' },
+              { pin: '60', voice: '¡Canal Directo completado con éxito! Marca conectada al usuario final por la nube.' },
             ]}
-            errorVoice="¡Error! El Quick Commerce despacha desde Dark Stores, no desde fábricas ni mayoristas. Solo necesitas la Dark Store y el cliente. Sistema bloqueado."
+            errorVoice="¡Error! El Canal Directo en e-commerce conecta la marca con el cliente vía internet, sin bodegas ni mayoristas. Sistema bloqueado."
             onComplete={() => setPhase('c4_builder')}
-            onError={(voice) => triggerPenalty(voice, 'c4_builder', 'Fase 1-3: Ingresó mal un PIN de seguridad de canales (Caso 3)')}
+            onError={(voice) => triggerPenalty(voice, 'c4_builder', 'Fase 1-3: Ingresó mal un PIN de seguridad de canales (Caso 3 - Digital)')}
           />
         )}
 
