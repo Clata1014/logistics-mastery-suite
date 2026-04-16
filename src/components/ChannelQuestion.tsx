@@ -74,10 +74,9 @@ export default function ChannelQuestion({
           className="w-full aspect-video rounded-xl shadow-lg border-2 border-orange object-cover mb-6"
         />
       ) : videoUrl ? (
-        <div className="w-full aspect-video mb-6 rounded-xl overflow-hidden shadow-lg border-2 border-orange">
+        <div className="w-full aspect-video mb-6 rounded-xl overflow-hidden shadow-lg border-2 border-orange min-h-[250px]">
           <iframe
-            width="100%"
-            height="100%"
+            className="w-full h-full min-h-[250px]"
             src={videoUrl}
             title={title}
             frameBorder="0"
