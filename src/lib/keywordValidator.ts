@@ -32,6 +32,15 @@ export const PRODUCT_KEYWORDS: Record<number, KeywordRule> = {
     penaltyMessage: '❌ REPORTE RECHAZADO: Un gerente evalúa riesgos. El altísimo VALOR del producto exige canal corto para mitigar el RIESGO de ROBO en bodegas masivas. ¡Tu nota bajó, corrige el texto!',
     theory: 'Los celulares gama alta tienen altísimo VALOR concentrado en mínimo volumen, lo que genera alto RIESGO de ROBO. Se requiere canal CORTO y EXCLUSIVO (fábrica ➔ vitrina) para minimizar la exposición en bodegas masivas y proteger la SEGURIDAD del inventario.',
   },
+  2: { // Producto Digital / E-commerce
+    groups: [
+      ['internet', 'web', 'nube', 'redes', 'instagram', 'digital', 'software', 'canales'],
+      ['directo', 'sin intermediarios'],
+    ],
+    allKeywords: ['internet', 'nube', 'redes', 'instagram', 'web', 'sin intermediarios', 'software', 'digital', 'directo', 'canales'],
+    penaltyMessage: '❌ REPORTE RECHAZADO: Tu justificación no menciona el canal DIRECTO ni los medios DIGITALES (internet, redes, web, nube). El producto digital se entrega SIN INTERMEDIARIOS físicos por canales digitales. ¡Corrige el texto!',
+    theory: 'Los productos digitales se entregan al cliente final por INTERNET (web, redes sociales, INSTAGRAM, la NUBE) usando un Canal DIRECTO, SIN INTERMEDIARIOS físicos. No requieren cajas, bodegas ni transporte físico — viajan como SOFTWARE o contenido DIGITAL.',
+  },
 };
 
 export interface NLPAnalysis {
