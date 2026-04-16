@@ -35,15 +35,12 @@ export default function VictoryScreen({ teamName, elapsedSeconds, errorCount, er
     frame();
   }, [teamName]);
 
-  const sendWhatsApp = () => {
-    const detailLines = errorLog.length > 0
-      ? errorLog.join('\n\n====================\n\n')
-      : 'El estudiante demostró dominio absoluto sin fallas operativas';
+  const detailLines = errorLog.length > 0
+    ? errorLog.join('\n\n====================\n\n')
+    : 'El estudiante demostró dominio absoluto sin fallas operativas';
 
-    const mensajeFinal = `🎓 REPORTE DEL SIMULADOR LOGÍSTICO 🎓\n👤 Estudiante: ${teamName}\n⏱️ Tiempo Total: ${timeStr}\n🏆 NOTA DEL SISTEMA: ${grade}\n\n❌ CANTIDAD DE ERRORES: ${errorCount}\n\n📋 DETALLE FORENSE DE LAS FALLAS:\n\n${detailLines}\n\n¡Hola profe! El sistema certifica mi graduación operativa. Adjunto mi bitácora forense de errores para su revisión en la planilla.`;
-    const whatsappUrl = `https://wa.me/573126079424?text=${encodeURIComponent(mensajeFinal)}`;
-    window.open(whatsappUrl, '_blank');
-  };
+  const mensajeFinal = `🎓 REPORTE DEL SIMULADOR LOGÍSTICO 🎓\n👤 Estudiante: ${teamName}\n⏱️ Tiempo Total: ${timeStr}\n🏆 NOTA DEL SISTEMA: ${grade}\n\n❌ CANTIDAD DE ERRORES: ${errorCount}\n\n📋 DETALLE FORENSE DE LAS FALLAS:\n\n${detailLines}\n\n¡Hola profe! El sistema certifica mi graduación operativa. Adjunto mi bitácora forense de errores para su revisión en la planilla.`;
+  const whatsappUrl = `https://wa.me/573126079424?text=${encodeURIComponent(mensajeFinal)}`;
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center bg-background">
