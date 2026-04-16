@@ -157,7 +157,7 @@ export default function SimuladorApp() {
         {phase === 'c1_channel' && (
           <ChannelQuestion
             icon="truck"
-            videoUrl="https://www.youtube.com/embed/NUz2NDWAHKU"
+            nativeVideoUrl="/videos/Canal_Logistico_con_Intermediario.mp4"
             title="📦 CASO 1: CONSUMO MASIVO — POSTOBÓN"
             description="Las tractomulas de Postobón salen de la fábrica con millones de gaseosas. El objetivo es llegar a miles de tienditas de barrio, pero las tractomulas gigantes NO CABEN por esas calles estrechas."
             question="Para evitar un caos urbano, la fábrica está OBLIGADA a entregarle la mercancía a una bodega inmensa (el Mayorista). Allí dividen la carga en furgones pequeños que sí entran a los barrios. Al existir este gran intermediario (el Mayorista) en la mitad de la cadena para fraccionar el volumen, ¿qué tipo de canal logístico estamos usando?"
@@ -187,7 +187,7 @@ export default function SimuladorApp() {
         {phase === 'c2_channel' && (
           <ChannelQuestion
             icon="store"
-            videoUrl="https://www.youtube.com/embed/x2LhJX3cKsI"
+            nativeVideoUrl="/videos/Optimizacion_Logistica_Hard_Discount.mp4"
             title="🛒 CASO 2: HARD DISCOUNT — D1 / ARA"
             description="Para competir con precios bajos, debemos optimizar la cadena. Decidimos vender los productos directamente desde su caja de cartón corrugado y eliminar comisiones de terceros."
             question="Al eliminar al distribuidor mayorista y conectar la fábrica directo con el supermercado, ¿qué modelo logístico estamos aplicando?"
@@ -216,7 +216,7 @@ export default function SimuladorApp() {
         {phase === 'c3_channel' && (
           <ChannelQuestion
             icon="bike"
-            videoUrl="https://www.youtube.com/embed/K44FpWmVfCg"
+            nativeVideoUrl="/videos/Video_De_Entrega_De_Moto.mp4"
             title="🛵 CASO 3: ENTREGAS EN 15 MIN — RAPPI TURBO"
             description="El cliente exige inmediatez. El reto es el alto costo urbano: el trayecto final desde la bodega hasta la puerta del cliente consume hasta el 53% del costo total logístico."
             question="Este modelo de hiper-proximidad que despacha desde Dark Stores cerradas al público se conoce como:"
