@@ -86,12 +86,14 @@ export default function VictoryScreen({ teamName, elapsedSeconds, errorCount, er
         )}
       </div>
 
-      <button
-        onClick={sendWhatsApp}
-        className="w-full max-w-sm bg-green-500 hover:bg-green-600 text-white font-display text-lg py-4 rounded-xl transition-all active:scale-95 animate-pulse"
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block w-full max-w-sm bg-green-500 hover:bg-green-600 text-white font-display text-lg py-4 rounded-xl transition-all active:scale-95 animate-pulse text-center"
       >
         📲 ENVIAR CALIFICACIÓN OFICIAL A LA PROFE
-      </button>
+      </a>
       <p className="text-red-400 text-xs mt-3 font-bold">⚠️ Atención: Si no envías tu reporte por WhatsApp, tu nota será 0.0</p>
     </div>
   );
