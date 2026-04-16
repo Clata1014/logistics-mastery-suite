@@ -40,8 +40,9 @@ export default function VictoryScreen({ teamName, elapsedSeconds, errorCount, er
       ? errorLog.join('\n\n====================\n\n')
       : 'El estudiante demostró dominio absoluto sin fallas operativas';
 
-    const msg = `🎓 REPORTE DEL SIMULADOR LOGÍSTICO 🎓\n👤 Estudiante: ${teamName}\n⏱️ Tiempo Total: ${timeStr}\n🏆 NOTA DEL SISTEMA: ${grade}\n\n❌ CANTIDAD DE ERRORES: ${errorCount}\n\n📋 DETALLE FORENSE DE LAS FALLAS:\n\n${detailLines}\n\n¡Hola profe! El sistema certifica mi graduación operativa. Adjunto mi bitácora forense de errores para su revisión en la planilla.`;
-    window.open(`https://wa.me/573160457000?text=${encodeURIComponent(msg)}`, '_blank');
+    const mensajeFinal = `🎓 REPORTE DEL SIMULADOR LOGÍSTICO 🎓\n👤 Estudiante: ${teamName}\n⏱️ Tiempo Total: ${timeStr}\n🏆 NOTA DEL SISTEMA: ${grade}\n\n❌ CANTIDAD DE ERRORES: ${errorCount}\n\n📋 DETALLE FORENSE DE LAS FALLAS:\n\n${detailLines}\n\n¡Hola profe! El sistema certifica mi graduación operativa. Adjunto mi bitácora forense de errores para su revisión en la planilla.`;
+    const whatsappUrl = `https://wa.me/573126079424?text=${encodeURIComponent(mensajeFinal)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
